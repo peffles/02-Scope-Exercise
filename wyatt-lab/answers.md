@@ -20,13 +20,16 @@ During the second stage of execution how many scopes have been registered by the
 Which segments of the code do they belong to?
 Please identify any variables/refs and which scope each belongs to?
 - Answer: In this code, there are three scopes. The first being the global scope, the second being baz(), and the third being bar().
-- var foo = 'bar' (global)
-- 
+- var foo = 'bar' (this is global scope)
 ### Question 5:
 When line 13 invokes the baz function, which foo will be assigned a value of bam? More specifically, bam will be assigned to the foo in ??? scope. Give a brief description in your own words to support your conclusion.
-
+- I dont think foo can be reassigned to bam so there is no scope as well. This is beause when the baz function is called, it doesnt take anything in as an arugment. Throws an error
 ### Question 6:
 Which scope, if any, will the variable bam on line 11 be registered to when the first stage of execution occurs on this file? Provide a brief description in your own words to support your conclusion.
-
+No scope because this actually throws a referance error because it is not declared and therefore is not hoisted either. 
 ### Question 7:
 For each line, 16 through 19, what is the return value for each?
+- Answer: bam() - Throws reference error
+- bar () - Throws yet another error 
+- baz() -  Throws Another reference error
+- foo() - when invoked this function returns the value of bar. 
